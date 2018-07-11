@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var db = require('./db');
 
-var manufacturer_case = db.define('manufacturer_case',{
+var doc_reply = db.define('doc_reply',{
     id: {
         type: Sequelize.BIGINT(11),
         primaryKey: true,
@@ -9,12 +9,12 @@ var manufacturer_case = db.define('manufacturer_case',{
         unique: true,
         autoIncrement: true
     },
-    manufacturer_id: Sequelize.INTEGER,
-    name: Sequelize.STRING(45),
+    doc_id: Sequelize.BIGINT(11),
+    user_id: Sequelize.BIGINT(11),
     details: Sequelize.TEXT
 },{
     timestamps: false,   // 不要默认时间戳
     freezeTableName: true
 });
 
-module.exports = manufacturer_case;
+module.exports = doc_reply;

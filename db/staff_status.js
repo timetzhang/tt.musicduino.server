@@ -1,9 +1,9 @@
 var Sequelize = require('sequelize');
 var db = require('./db');
 
-var course = db.define('course',{
+var staff_status = db.define('staff_status',{
     id: {
-        type: Sequelize.BIGINT(11),
+        type: Sequelize.TINYINT(20),
         primaryKey: true,
         allowNull: false,
         unique: true,
@@ -15,4 +15,4 @@ var course = db.define('course',{
     freezeTableName: true
 });
 
-module.exports = course;
+module.exports = staff_status;
