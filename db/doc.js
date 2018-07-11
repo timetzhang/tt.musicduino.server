@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var db = require('./db');
 
-var manufacturer = db.define('manufacturer',{
+var doc = db.define('doc',{
     id: {
         type: Sequelize.BIGINT(11),
         primaryKey: true,
@@ -30,4 +30,4 @@ var manufacturer = db.define('manufacturer',{
     freezeTableName: true
 });
 
-module.exports = manufacturer;
+module.exports = doc;
