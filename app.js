@@ -12,6 +12,8 @@ const course = require('./routes/course')
 const about = require('./routes/about')
 const download = require('./routes/download')
 
+const cmsIndex = require('./routes/cms/index')
+
 // error handler
 onerror(app)
 
@@ -41,6 +43,11 @@ app.use(doc.routes(), doc.allowedMethods())
 app.use(course.routes(), course.allowedMethods())
 app.use(download.routes(), download.allowedMethods())
 app.use(about.routes(), about.allowedMethods())
+
+//routes cms
+app.use(cmsIndex.routes(), cmsIndex.allowedMethods())
+
+
 
 // error-handling
 app.on('error', (err, ctx) => {
