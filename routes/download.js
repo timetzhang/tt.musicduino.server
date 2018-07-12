@@ -1,11 +1,10 @@
 const router = require('koa-router')()
 
-router.prefix('/course')
+router.prefix('/download')
 
 router.get('/', async (ctx, next) => {
-  await ctx.render('course', {
+  await ctx.render('download', {
     title: 'Hello Koa 2!'
   })
 })
-
 module.exports = router

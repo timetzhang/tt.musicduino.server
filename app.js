@@ -10,6 +10,7 @@ const index = require('./routes/index')
 const doc = require('./routes/doc')
 const course = require('./routes/course')
 const about = require('./routes/about')
+const download = require('./routes/download')
 
 // error handler
 onerror(app)
@@ -38,6 +39,7 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods())
 app.use(doc.routes(), doc.allowedMethods())
 app.use(course.routes(), course.allowedMethods())
+app.use(download.routes(), download.allowedMethods())
 app.use(about.routes(), about.allowedMethods())
 
 // error-handling

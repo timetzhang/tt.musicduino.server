@@ -8,23 +8,50 @@ html
     script(src="/layui/layui.js")
   body
     .layui-container
+      .layui-row.top-bar
+        .layui-col-md2(style='background-color:#a9ff00') &nbsp;
+        .layui-col-md2(style='background-color:#eaff00') &nbsp;
+        .layui-col-md2(style='background-color:#ffc000') &nbsp;
+        .layui-col-md2(style='background-color:#ff8a00') &nbsp;
+        .layui-col-md2(style='background-color:#ff5a00') &nbsp;
+        .layui-col-md2(style='background-color:#ff0000') &nbsp;
       .layui-row.header
-        .layui-col-md6(style="padding:18px")
+        .layui-col-md5(style="padding:18px")
           a(href='/') 
             img(src='/img/logo.png', width="166px")
-        .layui-col-md6
-          ul.layui-nav(style='background-color:#444')
+        .layui-col-md7
+          ul.layui-nav(style="text-align:right")
+            li.layui-nav-item
+              a(href='/') 
+                i.layui-icon.layui-icon-home &nbsp;
+                span 首页
             li.layui-nav-item
               a(href='/doc') 
+                i.layui-icon.layui-icon-component &nbsp;
+                span 文章
             li.layui-nav-item
-              a(href='/course') COURSE
+              a(href='/course') 
+                i.layui-icon.layui-icon-read &nbsp;
+                span 课程
             li.layui-nav-item
-              a(href='/product') PRODUCT
+              a(href='/download') 
+                i.layui-icon.layui-icon-list &nbsp;
+                span 资源
             li.layui-nav-item
-              a(href='/about') ABOUT
+              a(href='/about') 
+                i.layui-icon.layui-icon-about &nbsp;
+                span 关于
       .layui-row.main
-        block content
+        .layui-col-md12
+          block content
       .layui-row.footer
+        .layui-col-md6.left.layui-breadcrumb(lay-separator="|")
+          a(href='/') MUSICDUINO.COM 
+          a(href='/copyright') Copyright 2018
+          a(href='http://www.miitbeian.gov.cn') 湘ICP备17017251号
+        .layui-col-md6.right.layui-breadcrumb(lay-separator="|")
+          a(href='/sitemap') 网站地图
+          a(href='/about') 关于我们
     script.
       layui.use('element', function(){
         var element = layui.element;
