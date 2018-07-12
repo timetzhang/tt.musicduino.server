@@ -28,6 +28,29 @@ a:hover{
   .layui-nav{
     background-color: #222;
   }
+
+  #logo{
+    width: 166px;
+  }
+
+  .mobile-menu-button-col{
+    display: none;
+  }
+
+  @media(min-device-width:320px)and(max-device-width:667px)and(-webkit-min-device-pixel-ratio:2){
+    #logo{
+      width: 83px;
+    }
+
+    .menu{
+      display: none;
+    }
+
+    .mobile-menu-button-col{
+      display: block;
+      padding: 15px;
+    }
+  }
 }
 
 .footer{

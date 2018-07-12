@@ -3,24 +3,28 @@ html
   head
     title= title
     meta(name='viewport',content='width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densitydpi=device-dpi')
+    script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js")
     link(rel="stylesheet", href='/layui/css/layui.css')
     link(rel='stylesheet', href='/css/style.css')
     script(src="/layui/layui.js")
+    script(src="/js/layout.js")
+    script(src="/js/common/basic.js")
+    block head
   body
     .layui-container
       .layui-row.top-bar
-        .layui-col-md2(style='background-color:#a9ff00') &nbsp;
-        .layui-col-md2(style='background-color:#eaff00') &nbsp;
-        .layui-col-md2(style='background-color:#ffc000') &nbsp;
-        .layui-col-md2(style='background-color:#ff8a00') &nbsp;
-        .layui-col-md2(style='background-color:#ff5a00') &nbsp;
-        .layui-col-md2(style='background-color:#ff0000') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#a9ff00') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#eaff00') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#ffc000') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#ff8a00') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#ff5a00') &nbsp;
+        .layui-col-md2.layui-col-xs2(style='background-color:#ff0000') &nbsp;
       .layui-row.header
-        .layui-col-md5(style="padding:18px")
+        .layui-col-md5.layui-col-xs9(style="padding:18px")
           a(href='/') 
-            img(src='/img/logo.png', width="166px")
+            img#logo(src='/img/logo.png')
         .layui-col-md7
-          ul.layui-nav(style="text-align:right")
+          ul.layui-nav.menu(style="text-align:right")
             li.layui-nav-item
               a(href='/') 
                 i.layui-icon.layui-icon-home &nbsp;
@@ -41,6 +45,8 @@ html
               a(href='/about') 
                 i.layui-icon.layui-icon-about &nbsp;
                 span 关于
+        .layui-col-xs3.mobile-menu-button-col.right
+          i.layui-icon.layui-icon-shrink-right#mobile-menu-button(style='font-size:25px;')
       .layui-row.main
         .layui-col-md12
           block content
@@ -52,7 +58,5 @@ html
         .layui-col-md6.right.layui-breadcrumb(lay-separator="|")
           a(href='/sitemap') 网站地图
           a(href='/about') 关于我们
-    script.
-      layui.use('element', function(){
-        var element = layui.element;
-      });
+      
+      

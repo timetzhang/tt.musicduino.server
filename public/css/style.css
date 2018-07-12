@@ -23,6 +23,24 @@ a:hover {
 .header .layui-nav {
   background-color: #222;
 }
+.header #logo {
+  width: 166px;
+}
+.header .mobile-menu-button-col {
+  display: none;
+}
+@media (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .header #logo {
+    width: 83px;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .mobile-menu-button-col {
+    display: block;
+    padding: 15px;
+  }
+}
 .footer {
   background-color: #222;
   color: #666;
